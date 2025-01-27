@@ -1,4 +1,6 @@
 import './WeatherData.css'
+import './WeatherDataMedia.css'
+
 import searchIcon from '../img/seatch.png'
 import Cloudly from '../img/Cloudy.png'
 import Humadity from '../img/Humadity.png'
@@ -88,22 +90,27 @@ export default function WeatherData(){
                 </div>
                 <div className={'line'}></div>
                 <p className={'WeatherData__details-ToDayForecast'}>Today’s Weather Forecast...</p>
-                {weatherData?.daily?.time?.map((time, index) => (
-                    <div className={'WeatherData__details-ToDayForecast-Item'} key={index}>
-                        <img
-                            className={'ToDayForecast-iMG'}
-                            src={weatherData?.daily?.weathercode ? changeWeatherType(weatherData.daily.weathercode[index]).pick : 'Невідомо'}
-                            alt="Weather Icon"
-                        />
-                        <div className={'ToDayForecast-Item-time'}>
-                            <p>{time}</p>
-                            <p>{weatherData?.daily?.weathercode ? changeWeatherType(weatherData.daily.weathercode[index]).title : 'Невідомо'}</p>
+                {weatherData?.daily?.time?.map((time, index) => {
+                    const weather = weatherData?.daily?.weathercode ? changeWeatherType(weatherData.daily.weathercode[index]) : 'Невідомо';
+           const weatherInfo = typeof weather !== 'string' ? weather : null;
+
+                    return (
+                        <div className={'WeatherData__details-ToDayForecast-Item'} key={index}>
+                            <img
+                                className={'ToDayForecast-iMG'}
+                                src={weatherInfo ? weatherInfo.pick : ''}
+                                alt="Weather Icon"
+                            />
+                            <div className={'ToDayForecast-Item-time'}>
+                                <p>{time}</p>
+                                <p>{weatherInfo ? weatherInfo.title : 'Невідомо'}</p>
+                            </div>
+                            <div>
+                                <p>{weatherData?.daily?.temperature_2m_max ? weatherData.daily.temperature_2m_max[index] : 'N/A'}°C</p>
+                            </div>
                         </div>
-                        <div>
-                            <p>{weatherData?.daily?.temperature_2m_max ? weatherData.daily.temperature_2m_max[index] : 'N/A'}°C</p>
-                         </div>
-                    </div>
-                ))}
+                    );
+                })}
 
                 <div className={'line'}></div>
             </div>

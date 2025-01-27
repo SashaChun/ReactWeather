@@ -1,0 +1,160 @@
+@media (max-width: 576px) {
+
+    .Loader{
+
+    }
+
+    .WeatherData__details-about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .WeatherData__details-forecast,
+    .WeatherData__details-ToDayForecast {
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .WeatherData__inputLine {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .WeatherData__input {
+        width: 100%;
+    }
+
+    .main-detail {
+        gap: 0;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-detail * {
+        margin-left: 0;
+    }
+
+    .main-detail__temperature p {
+        font-size: 50px;
+    }
+
+    .main-detail__location-name {
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .main-detail__weather {
+        margin-top: 30px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .backGround {
+        flex-direction: column;
+    }
+
+    .WeatherData {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .WeatherData__inputLine {
+        width: 90%;
+        visibility: hidden;
+    }
+
+    .WeatherData__detail {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.Loader{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .main-detail {
+        height: 70vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .backGround {
+        flex-direction: column;
+    }
+
+    .WeatherData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .WeatherData__inputLine {
+        width: 90%;
+    }
+
+    .WeatherData__detail {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1222px) {
+    .main-detail {
+        height: 70vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .backGround {
+        flex-direction: column;
+    }
+
+    .WeatherData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .WeatherData__inputLine {
+        width: 90%;
+    }
+
+    .WeatherData__detail {
+        width: 100%;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    .WeatherData__details-forecast,
+    .WeatherData__details-ToDayForecast {
+        font-size: 19px;
+    }
+}

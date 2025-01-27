@@ -5,6 +5,7 @@ import GetData from '../../utils/GetData.tsx';
 import Snow from '../img/Snow.png';
 import { selectSearchCity, setWeather } from "../../store/weatherSlice.ts";
 import './MainDetail.css';
+import './MainDetaillMedia.css'
 import Loader from '../../page/img/Loader.svg'
 
 export default function MainDetail() {

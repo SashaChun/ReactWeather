@@ -67,7 +67,7 @@ export const weatherSlice = createSlice({
                 state.weather.temperature_2m_min = action.payload.temperature_2m_min;
             }
         },
-        updateDailyWeather: (state, action: PayloadAction<{ daily: { temperature_2m_max: number[]; temperature_2m_min: number[]; time: string[]; weatherCode: number[] } }>) => {
+        updateDailyWeather: (state, action: PayloadAction<{ daily: { temperature_2m_max: number[]; temperature_2m_min: number[]; time: string[]; weathercode: number[] } }>) => {
             if (state.weather) {
                 state.weather.daily = action.payload.daily;
             }

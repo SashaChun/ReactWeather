@@ -6,7 +6,7 @@
     padding-left: 50px;
     padding-top: 50px;
     position: relative;
-    max-height: calc(100vh - 200px); /* Визначаємо максимальну висоту */
+    max-height: calc(100vh - 200px);
     overflow-y: auto;
 }
 
@@ -42,16 +42,15 @@
     cursor: pointer;
 }
 
-/* Огортаємо контент, щоб він був прокручуваним */
+
 .WeatherData__details {
     color: white;
     font: 1rem "Fira Sans", sans-serif;
     margin-top: 80px;
-    padding-right: 10px; /* Щоб не зливалися елементи */
+    padding-right: 10px;
 }
 
-/* Інші стилі залишаються без змін */
-.WeatherData__details-about {
+ .WeatherData__details-about {
     font-size: 24px;
     opacity: 90%;
     display: flex;
